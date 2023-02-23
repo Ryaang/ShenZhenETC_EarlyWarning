@@ -1,0 +1,9 @@
+flask
+flask_cors
+redis
+happybase
+numpy
+pandas
+tensorflow
+keras
+matplotlib
