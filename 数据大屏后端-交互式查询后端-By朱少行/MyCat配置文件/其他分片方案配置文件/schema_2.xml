@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE mycat:schema SYSTEM "schema.dtd">
+<mycat:schema xmlns:mycat="http://io.mycat/">
+    <schema name="MYETCDB" checkSQLschema="false" sqlMaxLimit="1000" dataNode="dn1">
+        <table name="etc" primaryKey="XH" dataNode="dn1,dn2" rule="my-sharding-by-murmur"></table>
+        <table name="cp_map" primaryKey="id" dataNode="dn1,dn2" type="global"></table>
+        <table name="etc_inout" primaryKey="XH" dataNode="dn1,dn2" rule="my-sharding-by-intfile"></table>
+    </schema>
+
+    <dataNode name="dn1" dataHost="localhost1" database="myetc" />
+    <dataNode name="dn2" dataHost="localhost2" database="myetc" />
+
+    <dataHost name="localhost1" maxCon="1000" minCon="10" balance="1" writeType="0" dbType="mysql" dbDriver="native" switchType="2" slaveThreshold="100">
+        <heartbeat>select user()</heartbeat>
+        <writeHost host="hostMl" url="124.71.207.74:3306" user="root" password="123456">
+            <readHost host="hostS1" url="124.71.166.207:3306" user="root" password="123456" />
+        </writeHost>
+    </dataHost> 
+
+    <dataHost name="localhost2" maxCon="1000" minCon="10" balance="0" writeType="0" dbType="mysql" dbDriver="native" switchType="2" slaveThreshold="100">
+        <heartbeat>select user()</heartbeat>
+        <writeHost host="hostM2" url="123.60.146.168:3306" user="root" password="123456"></writeHost>
+    </dataHost>
+</mycat:schema>

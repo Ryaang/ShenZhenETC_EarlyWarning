@@ -1,0 +1,198 @@
+div.Z39-1216-800[data-v-6a563753] {
+    height: 100%
+}
+
+div.Z39-1216-800 div.paintContainer[data-v-6a563753] {
+    height: 100%;
+    float: left
+}
+
+div.Z39-1216-800 div.paintContainer .paintTool[data-v-6a563753] {
+    width: 90%;
+    height: 100px;
+    margin-bottom: 10px;
+    background: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px
+}
+
+div.Z39-1216-800 div.paintContainer .paintTool .paintShape[data-v-6a563753] {
+    width: 100px;
+    height: 100%;
+    float: left
+}
+
+div.Z39-1216-800 div.paintContainer .paintTool .paintShape > div[data-v-6a563753] {
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    padding-top: 3px;
+    box-sizing: border-box;
+    border: 1px solid #dddfe6;
+    border-radius: 5px;
+    float: left;
+    cursor: pointer;
+    margin: 0 2px 2px 0
+}
+
+div.Z39-1216-800 div.paintContainer .paintTool .paintShape > div.active[data-v-6a563753] {
+    background: #3f9eff
+}
+
+div.Z39-1216-800 div.paintContainer .paintTool .paintShape > div img[data-v-6a563753] {
+    display: block;
+    margin: 0 auto;
+    width: 25px;
+    height: 25px
+}
+
+div.Z39-1216-800 div.paintContainer .paintTool .inputNumber[data-v-6a563753] {
+    width: 100px;
+    height: 100%;
+    float: left;
+    border-left: 1px solid #eaeaea;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center
+}
+
+div.Z39-1216-800 div.paintContainer .paintTool .inputNumber div.label[data-v-6a563753] {
+    color: #5f5f5f;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px
+}
+
+div.Z39-1216-800 div.paintContainer .paintTool .inputNumber .el-input-number--mini[data-v-6a563753] {
+    width: 50px
+}
+
+div.Z39-1216-800 div.paintContainer .paintTool .paintColor[data-v-6a563753] {
+    width: 60px
+}
+
+div.Z39-1216-800 div.paintContainer .paintArea[data-v-6a563753] {
+    height: calc(100% - 110px);
+    background: #fff;
+    border-radius: 5px
+}
+
+div.Z39-1216-800 div.paintContainer .paintArea .box-card[data-v-6a563753] {
+    height: 100%
+}
+
+div.Z39-1216-800 div.paintContainer .paintArea .box-card .header .el-button[data-v-6a563753]:nth-child(2) {
+    float: right;
+    padding: 3px 0
+}
+
+div.Z39-1216-800 div.paintContainer .paintArea .box-card .header .el-button[data-v-6a563753]:nth-child(3) {
+    float: right;
+    padding: 3px 10px 3px 0
+}
+
+div.Z39-1216-800 div.paintContainer .paintArea .box-card .header .el-button[data-v-6a563753]:nth-child(4) {
+    float: right;
+    padding: 3px 3px 3px 0
+}
+
+div.Z39-1216-800 div.paintContainer .paintArea .box-card .header i[data-v-6a563753] {
+    font-size: 12px
+}
+
+div.Z39-1216-800 div.paintContainer .paintArea .box-card[data-v-6a563753] .el-card__body {
+    padding: 0
+}
+
+div.Z39-1216-800 div.imageContainer[data-v-6a563753] {
+    height: 100%;
+    margin-left: 10px;
+    float: left
+}
+
+div.Z39-1216-800 div.imageContainer .saveImageArea[data-v-6a563753] {
+    height: calc(50% - 7px);
+    margin-bottom: 10px
+}
+
+div.Z39-1216-800 div.imageContainer .saveImageArea .saveImageCard[data-v-6a563753] {
+    width: 12%;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    position: relative
+}
+
+div.Z39-1216-800 div.imageContainer .saveImageArea .saveImageCard i.el-icon-delete[data-v-6a563753] {
+    position: absolute;
+    right: 40px;
+    bottom: 10px;
+    cursor: pointer
+}
+
+div.Z39-1216-800 div.imageContainer .saveImageArea .saveImageCard i.el-icon-download[data-v-6a563753] {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer
+}
+
+div.Z39-1216-800 div.imageContainer .importImageArea[data-v-6a563753] {
+    height: calc(50% - 7px)
+}
+
+div.Z39-1216-800 div.imageContainer .importImageArea .uploadImage[data-v-6a563753] {
+    float: right
+}
+
+div.Z39-1216-800 div.imageContainer .importImageArea .uploadImage .el-button[data-v-6a563753] {
+    padding: 3px 0
+}
+
+div.Z39-1216-800 div.imageContainer .importImageArea .uploadImageCard[data-v-6a563753] {
+    width: 16%;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    position: relative
+}
+
+div.Z39-1216-800 div.imageContainer .importImageArea .uploadImageCard i.el-icon-delete[data-v-6a563753] {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer
+}
+
+div.H15-1216-500[data-v-2fea7e1a] {
+    height: 100%
+}
+
+div.H15-1216-500 .operate[data-v-2fea7e1a] {
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+div.H15-1216-500 .operate .el-form[data-v-2fea7e1a] {
+    height: 100%
+}
+
+div.H15-1216-500 .el-table[data-v-2fea7e1a] {
+    margin-bottom: 20px
+}
+
+div.H15-1216-500 div.pagination[data-v-2fea7e1a] {
+    height: 36px;
+    line-height: 36px
+}
+
+div.H15-1216-500 div.pagination .el-pagination[data-v-2fea7e1a] {
+    float: right;
+    box-sizing: border-box
+}

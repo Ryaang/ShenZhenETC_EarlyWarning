@@ -1,0 +1,34 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+    padding: 0 !important
+}
+
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: left;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #f3f4f7
+}
+
+nav {
+    padding: 30px
+}
+
+nav a {
+    font-weight: 700;
+    color: #2c3e50
+}
+
+nav a.router-link-exact-active {
+    color: #42b983
+}
+
+.el-image-viewer__mask {
+    opacity: .9 !important
+}

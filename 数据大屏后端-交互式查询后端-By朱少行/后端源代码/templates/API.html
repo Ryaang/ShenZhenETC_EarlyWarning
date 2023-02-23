@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>说明文档</title>
+</head>
+<body>
+<h3>图表部分</h3>
+
+格式:名称---API
+<br>
+<br>
+left-top---<span class="c1">/left_top</span>
+<br>
+left-center---<span class="c1" >/left_center</span>
+<br>
+center-map---<span class="c1">/center_map</span>
+<br>
+center-bottom---<span class="c1">/center_bottom</span>
+<br>
+right-center---<span class="c1">/right_center</span>
+<br>
+D-bottom---<span class="c1">/D_bottom</span>
+
+<p>样例</p>
+<p class="c2">http://124.71.207.74:5000/left_top</p>
+
+<h3>交互式查询</h3>
+
+<p>API</p>
+<p class="c2">http://124.71.207.74:5000/interactive</p>
+<p class="c2">http://124.71.207.74:5000/download</p>
+请求参数格式样例：
+<p>样例一：</p>
+<p class="c2">{ "cond":参数字典, "field":需要查询的字段, "filetype":文件类型}</p>
+<p>样例二：</p>
+<p class="c2">{ "cond":参数字典, "filetype":文件类型}</p>
+<p>样例三：</p>
+<p class="c2">{ }</p>
+
+
+cond字典样例：
+<div class="d1">
+    cond = {<br>
+    "startXH": "1000",<br>
+    "SFZRKMC": "广东龙景站",<br>
+    "SFZCKMC": "广东水朗D站",<br>
+    "CX": "一型车(客)",<br>
+    "CP": "粤S88***",<br>
+    "BZ": "深圳入",<br>
+    "RKSJ": ['2020-12-21 23:30:00', '2020-12-21 23:40:00'],<br>
+    "CKSJ": ['2020-12-21 23:30:00', '2020-12-22 01:00:00'],<br>
+}
+
+</div>
+<br>
+field列表样例：
+<p class="c1">['XH', 'CP', 'CX', 'SFZRKMC', 'RKSJ', 'SFZCKMC', 'CKSJ', 'BZ']</p>
+
+<br>
+filetype样例：
+<p class="c1">"filetype":"csv"</p>
+<p class="c1">"filetype":"xlsx"</p>
+
+<p></p>
+对应SQL语句
+<p class="c4">
+select XH,CP,CX,SFZRKMC,RKSJ,SFZCKMC,CKSJ,BZ from etc_str where SFZRKMC = '广东龙景站' and SFZCKMC = '广东水朗D站' and CX = '一型车(客)' and CP = '粤S88***' and BZ = '深圳入' and RKSJ between '2020-12-21 23:30:00' and '2020-12-21 23:40:00' and CKSJ between '2020-12-21 23:30:00' and '2020-12-22 01:00:00'
+</p>
+
+<h3 class="c1">交互式查询注意事项</h3>
+
+<div >
+    <ul>
+        <li>时间以列表的形式返回，第一个为开始时间，第二个为结束时间</li>
+        <li>其他字段用key,value的形式返回</li>
+        <li>接收和返回的都是json字符串</li>
+        <li><span class="c3">cond字典为查询条件，必须传！！！但是可以传空字典，默认查询所有数据</span></li>
+        <li><span class="c3">field列表为查询字段，可以不传！！！如果不传，默认查询所有字段，即select * </span></li>
+        <li><span class="c3">filetype为文件下载类型，必须传！！！可选值为"csv"或"xlsx"</span></li>
+        <li><span class="c3">startXH字典为查询的起始序号, 注意不包括它自身，当startXH为1000时，起始序号为1001, 可以不传，不传默认起始序号为1</span></li>
+        <li><span class="c3">cond字典和field列表给了完整的参数，但是查询的时候，字段数量可以任意</span></li>
+        <li><span class="c3">当查询条件过多的时候，可能会返回空列表，前端需要对空列表进行判断</span></li>
+    </ul>
+</div>
+
+<style>
+.c1{
+    color: red;
+}
+.c2{
+    color: blue;
+}
+.d1{
+    color: red;
+}
+.c3{
+    color: #ba2be2;
+}
+.c4{
+    color: #2b87e2;
+}
+
+</style>
+
+</body>
+</html>
+
